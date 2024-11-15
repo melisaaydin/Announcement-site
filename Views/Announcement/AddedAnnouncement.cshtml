@@ -1,0 +1,11 @@
+@model Announcement
+<div>
+    <h3 class="display-4">Announcement from @Model.FullName:</h3>
+    <p class="lead"><b>Title: </b>@Model.Title</p>
+    <p class="lead"><b>Text: </b>@Model.Text</p>
+    <p class="lead"><b>Publisher: </b>@Model.FullName</p>
+    <p class="lead"><b>Publised Time: </b>@Model.AnnouncedAt</p>
+</div>
+<div>
+    <a class="btn btn-primary" href="../home/index">Home</a>
+</div>

@@ -1,0 +1,36 @@
+﻿@using Homework.Models
+@model List<Announcement>
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome!</h1>
+</div>
+<div>
+    <h2>Announcements(@Model.Count):</h2>
+    <h3>@DateTime.Now</h3>
+
+    <table class="table table-hover table-striped">
+        <thead>
+            <div>
+                <tr>
+                    <td><b>Title</b></td>
+                    <td><b>Responsible Person</b></td>
+                    <td><b>See details</b></td>
+                </tr>
+            </div>
+        </thead>
+
+        <body style=" text-align:start; ">
+            @foreach (var a in Model)
+            {
+                <tr>
+                    <td>@a.Title</td>
+                    <td>@a.ResponsiblePerson @a.FullName</td>
+                    <td><a asp-controller="Announcement" asp-action="Details" asp-route-id="@a.Id"
+                            class="btn btn-primary">See details</a></td>
+                </tr>
+            }
+        </body>
+    </table>
+</div>
+<div><a href="/Announcement/addAnnounce" class="btn btn-primary">Add Announcement</a></div>

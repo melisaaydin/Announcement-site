@@ -1,0 +1,39 @@
+@using Homework.Models
+@* @model List<Announcement> *@
+@model Announcement
+<div class="display">
+    <h2>Announcement Details</h2>
+</div>
+<div>
+    <p class="lead"><b>Title: </b>@Model.Title</p>
+    <p class="lead"><b>Text: </b>@Model.Text</p>
+    <p class="lead"><b>Publisher: </b>@Model.FullName @Model.ResponsiblePerson</p>
+    <p class="lead"><b>Published Time: </b>@Model.AnnouncedAt</p>
+</div>
+@* <a href="../home/index" class="btn btn-secondary">Back to Announcements</a> *@
+<a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Back to Announcements</a>
+@* <table class="table table-hover table-striped">
+<thead>
+<tr>
+<td><b>Title</b></td>
+<td><b>Text</b></td>
+<td><b>Publisher</b></td>
+<td><b>Publised Time</b></td>
+</tr>
+</thead>
+
+<tbody style=" text-align:start;">
+@foreach (var a in Model)
+{
+
+<tr>
+<td>@a.Title</td>
+<td>@a.Text</td>
+<td>@a.FullName</td>
+<td>@a.AnnouncedAt</td>
+</tr>
+
+
+}
+</tbody>
+</table> *@
